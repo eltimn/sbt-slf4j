@@ -1,35 +1,23 @@
-publishMavenStyle := true
-
-publishTo := {
-  val nexus = "https://oss.sonatype.org/"
-  if (isSnapshot.value)
-    Some("snapshots" at nexus + "content/repositories/snapshots")
-  else
-    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
-}
-
-publishArtifact in Test := false
-
-pomIncludeRepository := { _ => false }
-
-pomExtra := (
-  <url>https://github.com/eirslett/sbt-slf4j</url>
-  <licenses>
-    <license>
-      <name>The Apache Software License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
+pomExtra := {
   <scm>
-    <url>https://github.com/eirslett/sbt-slf4j</url>
-    <connection>scm:git:https://github.com/eirslett/sbt-slf4j.git</connection>
-    <developerConnection>scm:git:git@github.com:eirslett/sbt-slf4j.git</developerConnection>
+    <url>git@github.com:eltimn/sbt-slf4j.git</url>
+    <connection>scm:git:git@github.com:eltimn/sbt-slf4j.git</connection>
   </scm>
   <developers>
     <developer>
-      <id>eirslett</id>
-      <name>Eirik Sletteberg</name>
-      <email>eiriksletteberg@gmail.com</email>
+      <id>eltimn</id>
+      <name>Tim Nelson</name>
+      <url>https://eltimn.com/</url>
     </developer>
-  </developers>)
+  </developers>
+}
+
+publishArtifact in Test := false
+homepage := Some(url("https://github.com/eltimn/sbt-slf4j"))
+licenses := Seq(("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0.txt")))
+bintrayOrganization := Some("eltimn")
+
+publishArtifact in (Compile, packageBin) := true
+publishArtifact in (Test, packageBin) := false
+publishArtifact in (Compile, packageDoc) := false
+publishArtifact in (Compile, packageSrc) := true
