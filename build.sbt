@@ -1,7 +1,6 @@
 name := "sbt-slf4j"
 organization := "com.eltimn"
 
-sbtPlugin := true
 scalaVersion := "2.12.4"
 
 libraryDependencies ++= Seq(
