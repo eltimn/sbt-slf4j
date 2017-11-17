@@ -1,8 +1,4 @@
 pomExtra := {
-  <scm>
-    <url>git@github.com:eltimn/sbt-slf4j.git</url>
-    <connection>scm:git:git@github.com:eltimn/sbt-slf4j.git</connection>
-  </scm>
   <developers>
     <developer>
       <id>eltimn</id>
