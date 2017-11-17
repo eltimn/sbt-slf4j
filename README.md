@@ -9,7 +9,7 @@ are writing custom sbt tasks inline in your build
 definition - add the dependency in ./project/slf4j.sbt.
 
 ```sbt
-libraryDependencies += "com.eltimn" %% "sbt-slf4j" % "1.0.3"
+libraryDependencies += "com.eltimn" %% "sbt-slf4j" % "1.0.4"
 ```
 
 You have to setup SLF4J in every task implementation.
