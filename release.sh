@@ -18,7 +18,7 @@ if [ -n "$1" ]; then
   git tag v${VERSION}
 
   # build and publish it
-  sbt clean test package packageDoc publish
+  sbt clean test publish
 
   git push origin master
   git push origin v${VERSION}

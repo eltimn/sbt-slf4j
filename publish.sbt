@@ -17,5 +17,5 @@ bintrayOrganization := Some("eltimn")
 
 publishArtifact in (Compile, packageBin) := true
 publishArtifact in (Test, packageBin) := false
-publishArtifact in (Compile, packageDoc) := false
+publishArtifact in (Compile, packageDoc) := true
 publishArtifact in (Compile, packageSrc) := true
